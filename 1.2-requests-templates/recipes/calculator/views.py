@@ -23,6 +23,7 @@ def recipe_servings(request, bludo, data):
     servings = int(request.GET.get('servings', 1))
     recipe = {ing: round(am * servings, 2) for ing, am in DATA.get(bludo).items()}
     return recipe
+
 def home_view(request):
     template_name = 'calculator/home.html'
     pages = {
